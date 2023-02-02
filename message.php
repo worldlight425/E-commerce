@@ -1,4 +1,9 @@
-<style>
+<?php
+require('stripeConfig.php');
+if(isset($_POST['stripeToken'])){
+	?>
+
+	<style>
     .mess{
         height:80%;
         display:flex;
@@ -15,3 +20,6 @@
 <button style="background:orange;padding:5px;text-decoration:none"><a href="index.php"><b> Go to shopping sites </b></a> </button>
 
 </div>
+<?php
+}
+?>

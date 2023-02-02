@@ -2,11 +2,15 @@
 <head>
     <style>
         .selected_product{
-            position:relative;
+         
             margin-top:5%;
             display:flex;
             justify-content:center;
         }
+        .prod-in{
+    position:relative;
+    width:60%;
+  }
         #image-pr{
             
             height:80%;
@@ -15,8 +19,8 @@
         .img-magnifier-container {
          position:absolute;
          top:8%;
-         left:21%;
-         width:60%;
+         left:2%;
+         width:90%;
          height:100%
        }
        .detail-cont-pr{
@@ -94,9 +98,13 @@
 
       /*responsive for ipad iphone and other */
    @media (max-width: 700px) {
- .btn2{
-  display:none
- }
+
+ .prod-in{
+    width:100%;
+  }
+  .btn2{
+    display:none
+  }
   }
     </style>
     
@@ -170,7 +178,7 @@ $conn->close();
 ?>
 
 <div class="selected_product">
-  <div class="prod-in" style="background:aliceblue; width:60%;height:350px">
+  <div class="prod-in" style="background:aliceblue;height:350px">
   <div class="img-magnifier-container">
 <img id='image-pr' src="admin/upload/<?php echo $row11['product_img'] ?>"  alt="product-img">
 </div>

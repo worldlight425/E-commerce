@@ -75,11 +75,27 @@ $conn->close();
         <p>subtotal( item)</p>
         <p>shipping_fees: Rs 50</p>
 
-        <form action="message.php" method="post">
+   
       <label for=""> <i style=" text-decoration:underline;"> voucher code</i></label>  <input type="text" placeholder="Insert code" name="code" required>
         <p>Total: Rs <?php echo $row['product_price']?>+50 = <?php echo $row['product_price']+50 ?> </p>
-        <button class="btn-pay" type="submit" style="text-align:center;border:none;background:grey;border-radius:5px">Proceed to pay</button>
-        </form>
+        <?php
+require('stripeConfig.php');
+?>
+<form action="message.php" method="post">
+	<script
+		src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		data-key="<?php echo $publishableKey?>"
+		data-amount="<?php echo ($row['product_price']+50) ?>"
+		data-name="Electric-Shop"
+		data-description="Your Choice Our Voice"
+		data-image="./logo1.png"
+		data-currency="usd"
+		data-email="<?Php echo $_SESSION['customer_email']?>"
+	>
+	</script>
+
+</form>
+
 
 </div>
 

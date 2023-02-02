@@ -11,16 +11,17 @@
     color: grey;
 }
 .signup_div{
-   margin-left:400px;
-   margin-right:400px;
-   margin-bottom:100px;
     display: flex;
-    background-color: rgb(212, 229, 243);
     align-items: center;
     justify-content: center;
 }
 .div-sign{
    text-align:center
+}
+@media (max-width: 500px) {
+   .signup_div{
+    background-color: rgb(212, 229, 243);
+}
 }
    </style>
 </head>
