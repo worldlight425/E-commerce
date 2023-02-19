@@ -1,6 +1,9 @@
 <?php 
     include_once('./includes/headerNav.php');
     include_once('./includes/restriction.php');
+    if(!(isset($_SESSION['logged-in']))){
+        header("Location:login.php?unauthorizedAccess");
+      }
  ?>
 <head>
     <style>
