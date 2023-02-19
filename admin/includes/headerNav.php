@@ -35,7 +35,7 @@
           <a  class="nav-link" href="settings.php"> Settings </a>
         </li>
       </ul>
-      <button class="btn-info" style="border:none; background:wheat"> <a href="index.php?" style="text-decoration:none" >Logout</a> </button>
+      <button class="btn-info" style="border:none; background:wheat"> <a href="logout.php?" style="text-decoration:none" >Logout</a> </button>
     </div>
   </div>
 </nav>
