@@ -99,7 +99,7 @@
     <?php 
         if($_SESSION['customer_role'] =='admin') {
            echo "<h4>"."Go to Admin Panel"."</h4>";
-           echo "<button class='btn btn-medium' style='background:yellow'>"."<a id='admin' href='admin/index.php'>"."Admin"."</a>"."</button>";
+           echo "<button class='btn btn-medium' style='background:yellow'>"."<a id='admin' href='admin/login.php'>"."Admin"."</a>"."</button>";
         }
     ?>
  </div>
